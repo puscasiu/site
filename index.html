@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#082167" />
+    <meta
+      name="description"
+      content="Studio legale dell'Avv. Dan Virgil Puscasiu."
+    />
+    <title>Puscasiu | Studio legale</title>
+    <link rel="icon" type="image/png" href="assets/monogram.png" />
+    <style>
+      :root {
+        color-scheme: light;
+        --navy: #082167;
+        --paper: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+        margin: 0;
+      }
+
+      body {
+        color: var(--navy);
+        background: #6f8290 url("assets/background.jpg") center center / cover no-repeat fixed;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      main {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        padding: clamp(1.25rem, 5vw, 3rem);
+      }
+
+      .card {
+        width: min(100%, 27.5rem);
+        padding: clamp(2.5rem, 7vw, 3.75rem);
+        background: var(--paper);
+        text-align: center;
+        box-shadow: 0 1.5rem 4rem rgb(4 20 61 / 0.16);
+        animation: arrive 500ms ease-out both;
+      }
+
+      .logo {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .name {
+        margin: 3.25rem 0 1.15rem;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.0625rem;
+        font-weight: 400;
+        line-height: 1.6;
+      }
+
+      .contacts {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .contact {
+        display: grid;
+        width: 2.75rem;
+        height: 2.75rem;
+        place-items: center;
+        color: var(--navy);
+        border-radius: 50%;
+        transition: background-color 160ms ease, transform 160ms ease;
+      }
+
+      .contact:hover {
+        background: rgb(8 33 103 / 0.08);
+        transform: translateY(-2px);
+      }
+
+      .contact:focus-visible {
+        outline: 3px solid rgb(8 33 103 / 0.28);
+        outline-offset: 2px;
+      }
+
+      .contact svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: currentColor;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      @keyframes arrive {
+        from {
+          opacity: 0;
+          transform: translateY(0.75rem);
+        }
+      }
+
+      @media (max-width: 36rem) {
+        body {
+          background-attachment: scroll;
+          background-position: 53% center;
+        }
+
+        main {
+          padding: 1rem;
+        }
+
+        .card {
+          padding: 2.75rem 2rem;
+        }
+
+        .name {
+          margin-top: 2.5rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .card {
+          animation: none;
+        }
+
+        .contact {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card" aria-label="Contatti dello studio">
+        <img
+          class="logo"
+          src="assets/puscasiu-studio-blu.png"
+          width="1023"
+          height="379"
+          alt="Puscasiu Studio Legale"
+        />
+
+        <h1 class="name">Avv. Dan Virgil Puscasiu</h1>
+
+        <nav class="contacts" aria-label="Contatti">
+          <a
+            class="contact"
+            href="mailto:dan@puscasiu.com"
+            aria-label="Invia un'email a dan@puscasiu.com"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm.5 12a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V9.8l7.5 5.6 7.5-5.6V17Zm0-9.1L12 13.6 4.5 7.9V7a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v.9Z" />
+            </svg>
+            <span class="sr-only">Email</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>
